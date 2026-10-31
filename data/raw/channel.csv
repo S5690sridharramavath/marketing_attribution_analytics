@@ -1,0 +1,12 @@
+channel_id,channel_name,channel_type,is_offline,cost_model
+CH-01,paid_search,digital,0,CPC
+CH-02,paid_social,digital,0,CPM
+CH-03,email,digital,0,flat
+CH-04,display,digital,0,CPM
+CH-05,affiliate,digital,0,CPA
+CH-06,organic_search,digital,0,owned
+CH-07,direct,digital,0,owned
+CH-08,referral,digital,0,owned
+CH-09,events,offline,1,flat
+CH-10,direct_mail,offline,1,per_piece
+CH-11,webinar,digital,0,flat

@@ -1,0 +1,405 @@
+issue_type,entity_id,decision_applied
+anonymous_session_linked_without_evidence,SES-2026-000139,"link ignored: attribution uses touchpoint.contact_id only, never session.contact_id"
+anonymous_session_linked_without_evidence,SES-2026-003868,"link ignored: attribution uses touchpoint.contact_id only, never session.contact_id"
+anonymous_session_linked_without_evidence,SES-2026-005367,"link ignored: attribution uses touchpoint.contact_id only, never session.contact_id"
+campaign_costs_omitted,CMP-2026-000015,"roi=NULL, cost_status=no_cost_data (not zero cost, not infinite ROI)"
+campaign_costs_omitted,CMP-2026-000019,"roi=NULL, cost_status=no_cost_data (not zero cost, not infinite ROI)"
+missing_identifier,TOUCH-UNKNOWN-000001,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000002,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000003,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000004,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000005,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000006,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000007,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000008,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000009,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000010,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000011,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000012,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000013,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000014,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000015,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000016,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000017,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000018,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000019,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000020,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000021,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000022,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000023,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000024,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000025,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000026,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000027,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000028,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000029,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000030,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000031,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000032,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000033,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000034,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000035,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000036,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000037,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000038,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000039,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000040,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000041,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000042,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000043,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000044,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000045,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000046,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000047,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000048,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000049,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000050,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000051,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000052,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000053,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000054,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000055,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000056,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000057,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000058,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000059,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000060,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000061,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000062,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000063,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000064,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000065,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000066,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000067,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000068,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000069,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000070,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000071,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000072,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000073,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000074,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000075,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000076,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000077,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000078,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000079,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000080,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000081,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000082,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000083,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000084,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000085,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000086,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000087,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000088,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000089,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000090,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000091,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000092,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000093,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000094,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000095,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000096,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000097,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000098,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000099,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000100,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000101,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000102,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000103,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000104,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000105,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000106,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000107,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000108,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000109,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000110,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000111,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000112,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000113,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000114,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000115,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000116,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000117,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000118,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000119,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000120,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000121,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000122,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000123,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000124,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000125,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000126,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000127,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000128,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000129,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000130,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000131,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000132,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000133,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000134,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000135,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000136,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000137,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000138,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000139,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000140,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000141,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000142,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000143,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000144,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000145,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000146,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000147,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000148,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000149,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000150,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000151,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000152,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000153,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000154,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000155,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000156,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000157,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000158,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000159,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000160,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000161,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000162,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000163,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000164,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000165,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000166,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000167,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000168,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000169,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000170,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000171,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000172,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000173,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000174,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000175,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000176,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000177,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000178,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000179,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000180,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000181,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000182,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000183,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000184,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000185,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000186,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000187,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000188,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000189,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000190,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000191,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000192,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000193,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000194,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000195,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000196,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000197,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000198,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000199,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000200,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000201,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000202,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000203,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000204,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000205,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000206,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000207,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000208,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000209,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000210,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000211,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000212,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000213,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000214,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000215,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000216,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000217,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000218,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000219,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000220,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000221,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000222,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000223,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000224,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000225,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000226,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000227,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000228,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000229,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000230,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000231,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000232,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000233,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000234,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000235,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000236,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000237,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000238,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000239,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000240,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000241,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000242,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000243,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000244,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000245,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000246,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000247,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000248,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000249,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000250,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000251,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000252,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000253,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000254,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000255,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000256,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000257,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000258,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000259,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000260,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000261,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000262,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000263,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000264,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000265,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000266,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000267,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000268,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000269,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000270,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000271,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000272,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000273,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000274,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000275,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000276,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000277,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000278,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000279,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000280,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000281,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000282,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000283,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000284,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000285,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000286,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000287,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000288,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000289,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000290,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000291,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000292,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000293,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000294,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000295,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000296,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000297,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000298,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000299,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000300,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000301,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000302,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000303,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000304,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000305,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000306,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000307,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000308,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000309,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000310,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000311,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000312,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000313,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000314,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000315,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000316,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000317,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000318,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000319,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000320,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000321,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000322,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000323,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000324,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000325,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000326,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000327,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000328,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000329,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000330,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000331,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000332,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000333,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000334,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000335,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000336,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000337,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000338,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000339,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000340,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000341,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000342,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000343,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000344,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000345,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000346,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000347,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000348,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000349,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000350,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000351,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000352,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000353,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000354,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000355,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000356,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000357,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000358,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000359,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000360,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000361,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000362,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+missing_identifier,TOUCH-UNKNOWN-000363,touch excluded from attribution; revenue lands in the unattributed bucket when no other touch exists
+revenue_counted_more_than_once,ORD-2026-000016,excluded from clean variant (earliest order per opportunity kept)
+revenue_counted_more_than_once,ORD-2026-000070,excluded from clean variant (earliest order per opportunity kept)
+revenue_counted_more_than_once,ORD-2026-000073,excluded from clean variant (earliest order per opportunity kept)
+spend_currency_mismatch,COST-2026-000012,clean variant converts with the campaign currency
+spend_currency_mismatch,COST-2026-000106,clean variant converts with the campaign currency
+spend_currency_mismatch,COST-2026-000178,clean variant converts with the campaign currency
+touchpoint_after_conversion_attributed,ATTR-2026-0000136,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000144,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000152,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000160,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000841,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000848,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000849,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000850,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000851,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000852,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000853,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000860,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000861,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000862,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000863,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000864,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000865,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000872,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000873,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000874,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000875,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000876,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0000877,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0001174,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0001180,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0001181,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0001187,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0001188,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0001194,clean variant re-runs attribution with strict touch_ts <= order_ts
+touchpoint_after_conversion_attributed,ATTR-2026-0001195,clean variant re-runs attribution with strict touch_ts <= order_ts

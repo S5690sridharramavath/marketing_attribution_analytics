@@ -1,0 +1,1444 @@
+{
+ "total_checks": 169,
+ "failed": 0,
+ "passed": 169,
+ "as_of": "2026-10-22T23:59:59",
+ "row_counts": {
+  "channel": 11,
+  "audience": 45,
+  "campaign": 500,
+  "campaign_audience": 996,
+  "campaign_status_event": 1365,
+  "creative": 1190,
+  "contact": 50000,
+  "contact_audience": 60126,
+  "web_session": 110007,
+  "touchpoint": 200000,
+  "lead": 20000,
+  "lead_status_event": 59559,
+  "opportunity": 10000,
+  "opportunity_stage_event": 34076,
+  "sales_order": 3009,
+  "cost_record": 8186,
+  "fx_rate": 44,
+  "evaluation_period": 3,
+  "attribution_model": 5,
+  "attribution_result": 57276
+ },
+ "detectors": [
+  {
+   "issue_type": "anonymous_session_linked_without_evidence",
+   "labelled": 25,
+   "detected": 25,
+   "true_pos": 25,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "campaign_costs_omitted",
+   "labelled": 15,
+   "detected": 15,
+   "true_pos": 15,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "missing_identifier",
+   "labelled": 7544,
+   "detected": 7544,
+   "true_pos": 7544,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "revenue_counted_more_than_once",
+   "labelled": 40,
+   "detected": 40,
+   "true_pos": 40,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "spend_currency_mismatch",
+   "labelled": 30,
+   "detected": 30,
+   "true_pos": 30,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "issue_type": "touchpoint_after_conversion_attributed",
+   "labelled": 504,
+   "detected": 504,
+   "true_pos": 504,
+   "false_pos": 0,
+   "false_neg": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  }
+ ],
+ "checks": [
+  {
+   "check": "PK unique+not null: channel",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: audience",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: campaign",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: campaign_audience",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: campaign_status_event",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: creative",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: contact",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: contact_audience",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: web_session",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: touchpoint",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: lead",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: lead_status_event",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: opportunity",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: opportunity_stage_event",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: sales_order",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: cost_record",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: fx_rate",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: evaluation_period",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: attribution_model",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "PK unique+not null: attribution_result",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: channel.channel_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: audience.audience_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: campaign_status_event.event_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: creative.creative_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: contact.contact_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: touchpoint.touchpoint_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: web_session.session_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: lead.lead_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: lead_status_event.event_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: opportunity.opportunity_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: opportunity_stage_event.event_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: sales_order.order_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: cost_record.cost_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "ID format: attribution_result.attribution_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: channel",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: audience",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: campaign",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: campaign_audience",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: campaign_status_event",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: creative",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: contact",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: contact_audience",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: web_session",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: touchpoint",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: lead",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: lead_status_event",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: opportunity",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: opportunity_stage_event",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: sales_order",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: cost_record",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: fx_rate",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: evaluation_period",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: attribution_model",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "required fields present: attribution_result",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: channel.channel_type",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: channel.cost_model",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: campaign.objective",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: campaign.currency",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: campaign.status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: campaign_status_event.status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: creative.format",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: audience.segment",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: contact.segment",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: contact.lifecycle_state",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: touchpoint.touch_type",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: touchpoint.identity_link_status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: web_session.identity_link_evidence",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: lead.current_status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: opportunity.current_stage",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: opportunity.status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: sales_order.order_status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: sales_order.source_system",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: sales_order.currency",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: cost_record.cost_type",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: cost_record.currency",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: fx_rate.currency",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: attribution_result.model_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: attribution_result.evaluation_period",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "enum: attribution_result.attribution_status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: campaign_status_event.event_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: contact.created_at",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: web_session.started_at",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: touchpoint.touch_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: lead.created_at",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: lead_status_event.event_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: opportunity.created_at",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: opportunity.close_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: opportunity_stage_event.event_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: sales_order.order_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: evaluation_period.start_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "timestamp format: evaluation_period.end_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: campaign.channel_id -> channel.channel_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: campaign_audience.campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: campaign_audience.audience_id -> audience.audience_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: campaign_status_event.campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: creative.campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: contact.primary_audience_id -> audience.audience_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: contact_audience.contact_id -> contact.contact_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: contact_audience.audience_id -> audience.audience_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: touchpoint.contact_id -> contact.contact_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: touchpoint.campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: touchpoint.creative_id -> creative.creative_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: touchpoint.channel_id -> channel.channel_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: touchpoint.session_id -> web_session.session_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: web_session.contact_id -> contact.contact_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: web_session.landing_campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: lead.contact_id -> contact.contact_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: lead.session_id -> web_session.session_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: lead.creating_touchpoint_id -> touchpoint.touchpoint_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: lead.crm_source_campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: lead_status_event.lead_id -> lead.lead_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: opportunity.lead_id -> lead.lead_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: opportunity.contact_id -> contact.contact_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: opportunity_stage_event.opportunity_id -> opportunity.opportunity_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: sales_order.opportunity_id -> opportunity.opportunity_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: sales_order.contact_id -> contact.contact_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: cost_record.campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: attribution_result.order_id -> sales_order.order_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: attribution_result.opportunity_id -> opportunity.opportunity_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: attribution_result.touchpoint_id -> touchpoint.touchpoint_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: attribution_result.campaign_id -> campaign.campaign_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: attribution_result.model_id -> attribution_model.model_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "FK: attribution_result.evaluation_period -> evaluation_period.period_id",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "duplicate touches (contact,campaign,ts,type)",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "one session per click touch",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "one lead per contact",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "one opportunity per lead",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "campaign start <= end",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "touch within campaign dates",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "touch channel = campaign channel",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "touch creative belongs to campaign",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "touch is_offline = channel.is_offline",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "offline touches have no session",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "missing <=> contact_id NULL",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "touch_ts <= as-of",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "session.started_at = touch_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "touchpoint contact counter ids",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "contact.created_at = first resolved touch",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "lead.created_at > creating touch",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "lead.contact = creating touch contact",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "opportunity.created_at >= lead.created_at",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "opportunity.contact = lead.contact",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "order_ts >= opportunity.close_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "orders only for won opportunities",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "every won opportunity has an order",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "cost_date within campaign dates & <= as-of",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "lead lifecycle transitions + current status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "opportunity stage transitions + current stage",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "campaign status transitions + current status",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "opportunity.status consistent with stage",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "evaluation periods are chronological and contiguous",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "attribution evaluation_period matches order_ts",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "order.amount = opportunity.amount",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "credits per (order,model) sum to order amount (cents)",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "every order has results for every model",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "model totals (incl. unattributed) = total order revenue",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "order revenue = won opp revenue + labelled duplicates",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "attribution touch credited belongs to order's contact",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "attribution touch within 120-day lookback of conversion (past side)",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "attribution only credits engaged, resolved touches",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "campaign spend <= 102% of budget (consistent-currency rows)",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "detector == ground truth: anonymous_session_linked_without_evidence",
+   "kind": "detector",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "detector == ground truth: campaign_costs_omitted",
+   "kind": "detector",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "detector == ground truth: missing_identifier",
+   "kind": "detector",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "detector == ground truth: revenue_counted_more_than_once",
+   "kind": "detector",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "detector == ground truth: spend_currency_mismatch",
+   "kind": "detector",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "detector == ground truth: touchpoint_after_conversion_attributed",
+   "kind": "detector",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  },
+  {
+   "check": "no ground-truth columns in input tables",
+   "kind": "structural",
+   "violations": 0,
+   "status": "PASS",
+   "examples": [],
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+# Generator + pipeline configuration (flat YAML subset: "key: value", "#" comments).
+# CLI flags (--scale, --seed) override these values. Volumes below are for scale 1.0.
+seed: 20261022            # fixed seed, required by the brief
+scale: 1.0                # 1.0 = full volumes; 0.05 = starter dataset (same generator code path)
+
+# baseline volumes at scale 1.0
+campaigns: 500
+contacts: 50000
+touchpoints: 200000
+opportunities: 10000
+
+# business rules
+lead_rate: 0.40           # share of contacts that become leads (score-threshold rule)
+win_rate: 0.38            # share of closable opportunities that are won (rule-ranked)
+missing_id_rate: 0.05     # share of non-first touches with no identity key
+lookback_days: 120        # attribution window before conversion
+post_conv_grace_days: 90  # window overrun used ONLY by the injected "touch after conversion" bug
+
+# labelled edge cases at scale 1.0 (scaled down with a floor of 2-3)
+n_dup_orders: 40
+n_post_conv: 60
+n_cost_mismatch: 30
+n_cost_omitted: 15
+n_anon_linked: 25

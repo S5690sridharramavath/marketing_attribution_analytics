@@ -1,0 +1,112 @@
+[
+ {
+  "model_id": "first_touch",
+  "variant": "raw",
+  "total_revenue_usd": 5019000.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0893,
+  "portfolio_roi": 1.3747,
+  "channel_roi_rank_stability_train_vs_test": 0.759,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": -0.0888
+ },
+ {
+  "model_id": "first_touch",
+  "variant": "clean",
+  "total_revenue_usd": 4958850.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0904,
+  "portfolio_roi": 1.3175,
+  "channel_roi_rank_stability_train_vs_test": 0.759,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": -0.0888
+ },
+ {
+  "model_id": "last_touch",
+  "variant": "raw",
+  "total_revenue_usd": 5019000.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0893,
+  "portfolio_roi": 1.5438,
+  "channel_roi_rank_stability_train_vs_test": 0.6571,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": 0.3013
+ },
+ {
+  "model_id": "last_touch",
+  "variant": "clean",
+  "total_revenue_usd": 4958850.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0904,
+  "portfolio_roi": 1.485,
+  "channel_roi_rank_stability_train_vs_test": 0.6571,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": 0.299
+ },
+ {
+  "model_id": "linear",
+  "variant": "raw",
+  "total_revenue_usd": 5019000.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0893,
+  "portfolio_roi": 1.4624,
+  "channel_roi_rank_stability_train_vs_test": 0.7714,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": 0.0073
+ },
+ {
+  "model_id": "linear",
+  "variant": "clean",
+  "total_revenue_usd": 4958850.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0904,
+  "portfolio_roi": 1.4056,
+  "channel_roi_rank_stability_train_vs_test": 0.7714,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": -0.0104
+ },
+ {
+  "model_id": "time_decay",
+  "variant": "raw",
+  "total_revenue_usd": 5019000.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0893,
+  "portfolio_roi": 1.5477,
+  "channel_roi_rank_stability_train_vs_test": 0.6571,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": 0.1104
+ },
+ {
+  "model_id": "time_decay",
+  "variant": "clean",
+  "total_revenue_usd": 4958850.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0904,
+  "portfolio_roi": 1.4903,
+  "channel_roi_rank_stability_train_vs_test": 0.6571,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": 0.1227
+ },
+ {
+  "model_id": "position_based",
+  "variant": "raw",
+  "total_revenue_usd": 5019000.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0893,
+  "portfolio_roi": 1.4649,
+  "channel_roi_rank_stability_train_vs_test": 0.6571,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": 0.0389
+ },
+ {
+  "model_id": "position_based",
+  "variant": "clean",
+  "total_revenue_usd": 4958850.0,
+  "unattributed_revenue_usd": 448400.0,
+  "unattributed_share": 0.0904,
+  "portfolio_roi": 1.4072,
+  "channel_roi_rank_stability_train_vs_test": 0.6571,
+  "n_channels_compared": 6,
+  "campaign_credit_per_engaged_touch_vs_latent_quality_spearman": 0.0335
+ }
+]

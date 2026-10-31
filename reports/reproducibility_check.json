@@ -1,0 +1,151 @@
+{
+ "seed": 20261022,
+ "identical": true,
+ "files_compared": 24,
+ "files": [
+  {
+   "file": "data/ground_truth/ground_truth.csv",
+   "bytes": 109671,
+   "sha256": "a9edce1226db13f3",
+   "run2_identical": true
+  },
+  {
+   "file": "data/ground_truth/ground_truth.json",
+   "bytes": 173892,
+   "sha256": "a839cf7984e358ed",
+   "run2_identical": true
+  },
+  {
+   "file": "data/ground_truth/ground_truth_campaign_quality.csv",
+   "bytes": 599,
+   "sha256": "76398c8129670eb4",
+   "run2_identical": true
+  },
+  {
+   "file": "data/processed/attribution_model.csv",
+   "bytes": 804,
+   "sha256": "ee266a8babc37788",
+   "run2_identical": true
+  },
+  {
+   "file": "data/processed/attribution_result.csv",
+   "bytes": 381630,
+   "sha256": "ac01f9626ab2c82c",
+   "run2_identical": true
+  },
+  {
+   "file": "data/processed/evaluation_period.csv",
+   "bytes": 371,
+   "sha256": "11e058f4725636d3",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/audience.csv",
+   "bytes": 2111,
+   "sha256": "2cc967f38cfde35d",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/campaign.csv",
+   "bytes": 2605,
+   "sha256": "936edcb3be523b2b",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/campaign_audience.csv",
+   "bytes": 2496,
+   "sha256": "b0d4ccb414c04195",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/campaign_status_event.csv",
+   "bytes": 3924,
+   "sha256": "715c656381d310d4",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/channel.csv",
+   "bytes": 400,
+   "sha256": "c7b7bf91a87852e7",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/contact.csv",
+   "bytes": 171913,
+   "sha256": "3490c163483690af",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/contact_audience.csv",
+   "bytes": 96659,
+   "sha256": "8f5e8dc7187df4cc",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/cost_record.csv",
+   "bytes": 22056,
+   "sha256": "c94a8c739c6da959",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/creative.csv",
+   "bytes": 3703,
+   "sha256": "c97252c90290ef89",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/fx_rate.csv",
+   "bytes": 1531,
+   "sha256": "d79099d77e1b5347",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/lead.csv",
+   "bytes": 114430,
+   "sha256": "c6cd63344a5044cc",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/lead_status_event.csv",
+   "bytes": 178762,
+   "sha256": "18a2ba63f67a39d3",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/opportunity.csv",
+   "bytes": 56328,
+   "sha256": "4c909b244cd09e67",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/opportunity_stage_event.csv",
+   "bytes": 113148,
+   "sha256": "f5c146f1417ac971",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/sales_order.csv",
+   "bytes": 11956,
+   "sha256": "8ab5fbef92e2af25",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/touchpoint.csv",
+   "bytes": 1173438,
+   "sha256": "a6fb8633c82378f5",
+   "run2_identical": true
+  },
+  {
+   "file": "data/raw/web_session.csv",
+   "bytes": 494217,
+   "sha256": "a7fc4d87f98cd52f",
+   "run2_identical": true
+  },
+  {
+   "file": "database/schema.sql",
+   "bytes": 6915,
+   "sha256": "4f73dc3f7fd11d5d",
+   "run2_identical": true
+  }
+ ]
+}

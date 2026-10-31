@@ -1,0 +1,4 @@
+period_id,start_ts,end_ts,split_rule
+train,2026-01-01T00:00:00,2026-09-10T17:00:20,"order_ts quantiles: train <60%, validation 60-80%, test >=80%"
+validation,2026-09-10T17:00:20,2026-09-26T17:02:34,"order_ts quantiles: train <60%, validation 60-80%, test >=80%"
+test,2026-09-26T17:02:34,2026-10-23T00:00:00,"order_ts quantiles: train <60%, validation 60-80%, test >=80%"

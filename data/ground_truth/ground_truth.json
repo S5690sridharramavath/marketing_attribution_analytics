@@ -1,0 +1,4042 @@
+[
+ {
+  "issue_type": "revenue_counted_more_than_once",
+  "category": "injected_edge_case",
+  "entity": "sales_order",
+  "entity_id": "ORD-2026-000016",
+  "related_entity_id": "ORD-2026-000011",
+  "description": "Second order for OPP-2026-000110 replayed by billing; revenue 28300.00 USD double counted",
+  "expected_decision": "Keep the earliest order per won opportunity; exclude the duplicate from ROI",
+  "gt_id": "GT-000001"
+ },
+ {
+  "issue_type": "revenue_counted_more_than_once",
+  "category": "injected_edge_case",
+  "entity": "sales_order",
+  "entity_id": "ORD-2026-000070",
+  "related_entity_id": "ORD-2026-000067",
+  "description": "Second order for OPP-2026-000167 replayed by billing; revenue 14400.00 USD double counted",
+  "expected_decision": "Keep the earliest order per won opportunity; exclude the duplicate from ROI",
+  "gt_id": "GT-000002"
+ },
+ {
+  "issue_type": "revenue_counted_more_than_once",
+  "category": "injected_edge_case",
+  "entity": "sales_order",
+  "entity_id": "ORD-2026-000073",
+  "related_entity_id": "ORD-2026-000069",
+  "description": "Second order for OPP-2026-000264 replayed by billing; revenue 17450.00 USD double counted",
+  "expected_decision": "Keep the earliest order per won opportunity; exclude the duplicate from ROI",
+  "gt_id": "GT-000003"
+ },
+ {
+  "issue_type": "campaign_costs_omitted",
+  "category": "injected_edge_case",
+  "entity": "campaign",
+  "entity_id": "CMP-2026-000015",
+  "related_entity_id": null,
+  "description": "Completed campaign with a budget but zero cost records",
+  "expected_decision": "ROI is undefined (not infinite); flag cost_status=no_cost_data",
+  "gt_id": "GT-000004"
+ },
+ {
+  "issue_type": "campaign_costs_omitted",
+  "category": "injected_edge_case",
+  "entity": "campaign",
+  "entity_id": "CMP-2026-000019",
+  "related_entity_id": null,
+  "description": "Completed campaign with a budget but zero cost records",
+  "expected_decision": "ROI is undefined (not infinite); flag cost_status=no_cost_data",
+  "gt_id": "GT-000005"
+ },
+ {
+  "issue_type": "spend_currency_mismatch",
+  "category": "injected_edge_case",
+  "entity": "cost_record",
+  "entity_id": "COST-2026-000012",
+  "related_entity_id": "CMP-2026-000008",
+  "description": "Record states EUR but campaign currency (and true amount currency) is USD",
+  "expected_decision": "Convert using the campaign currency, not the stated one; flag for finance review",
+  "gt_id": "GT-000006"
+ },
+ {
+  "issue_type": "spend_currency_mismatch",
+  "category": "injected_edge_case",
+  "entity": "cost_record",
+  "entity_id": "COST-2026-000106",
+  "related_entity_id": "CMP-2026-000004",
+  "description": "Record states EUR but campaign currency (and true amount currency) is GBP",
+  "expected_decision": "Convert using the campaign currency, not the stated one; flag for finance review",
+  "gt_id": "GT-000007"
+ },
+ {
+  "issue_type": "spend_currency_mismatch",
+  "category": "injected_edge_case",
+  "entity": "cost_record",
+  "entity_id": "COST-2026-000178",
+  "related_entity_id": "CMP-2026-000009",
+  "description": "Record states INR but campaign currency (and true amount currency) is EUR",
+  "expected_decision": "Convert using the campaign currency, not the stated one; flag for finance review",
+  "gt_id": "GT-000008"
+ },
+ {
+  "issue_type": "anonymous_session_linked_without_evidence",
+  "category": "injected_edge_case",
+  "entity": "web_session",
+  "entity_id": "SES-2026-000139",
+  "related_entity_id": "CON-002191",
+  "description": "Session has contact_id but identity_link_evidence=none (no login, form or email click id)",
+  "expected_decision": "Reject the link; keep session anonymous and exclude from attribution",
+  "gt_id": "GT-000009"
+ },
+ {
+  "issue_type": "anonymous_session_linked_without_evidence",
+  "category": "injected_edge_case",
+  "entity": "web_session",
+  "entity_id": "SES-2026-003868",
+  "related_entity_id": "CON-001491",
+  "description": "Session has contact_id but identity_link_evidence=none (no login, form or email click id)",
+  "expected_decision": "Reject the link; keep session anonymous and exclude from attribution",
+  "gt_id": "GT-000010"
+ },
+ {
+  "issue_type": "anonymous_session_linked_without_evidence",
+  "category": "injected_edge_case",
+  "entity": "web_session",
+  "entity_id": "SES-2026-005367",
+  "related_entity_id": "CON-001785",
+  "description": "Session has contact_id but identity_link_evidence=none (no login, form or email click id)",
+  "expected_decision": "Reject the link; keep session anonymous and exclude from attribution",
+  "gt_id": "GT-000011"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000136",
+  "related_entity_id": "TOUCH-CON-000512-000008",
+  "description": "last_touch credit given to a touch that occurred after order ORD-2026-000005",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000012"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000144",
+  "related_entity_id": "TOUCH-CON-000512-000008",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000005",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000013"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000152",
+  "related_entity_id": "TOUCH-CON-000512-000008",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000005",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000014"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000160",
+  "related_entity_id": "TOUCH-CON-000512-000008",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000005",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000015"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000841",
+  "related_entity_id": "TOUCH-CON-001048-000014",
+  "description": "last_touch credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000016"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000848",
+  "related_entity_id": "TOUCH-CON-001048-000008",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000017"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000849",
+  "related_entity_id": "TOUCH-CON-001048-000009",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000018"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000850",
+  "related_entity_id": "TOUCH-CON-001048-000010",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000019"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000851",
+  "related_entity_id": "TOUCH-CON-001048-000011",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000020"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000852",
+  "related_entity_id": "TOUCH-CON-001048-000012",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000021"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000853",
+  "related_entity_id": "TOUCH-CON-001048-000014",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000022"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000860",
+  "related_entity_id": "TOUCH-CON-001048-000008",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000023"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000861",
+  "related_entity_id": "TOUCH-CON-001048-000009",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000024"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000862",
+  "related_entity_id": "TOUCH-CON-001048-000010",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000025"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000863",
+  "related_entity_id": "TOUCH-CON-001048-000011",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000026"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000864",
+  "related_entity_id": "TOUCH-CON-001048-000012",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000027"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000865",
+  "related_entity_id": "TOUCH-CON-001048-000014",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000028"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000872",
+  "related_entity_id": "TOUCH-CON-001048-000008",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000029"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000873",
+  "related_entity_id": "TOUCH-CON-001048-000009",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000030"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000874",
+  "related_entity_id": "TOUCH-CON-001048-000010",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000031"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000875",
+  "related_entity_id": "TOUCH-CON-001048-000011",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000032"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000876",
+  "related_entity_id": "TOUCH-CON-001048-000012",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000033"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0000877",
+  "related_entity_id": "TOUCH-CON-001048-000014",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000035",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000034"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0001174",
+  "related_entity_id": "TOUCH-CON-000626-000008",
+  "description": "last_touch credit given to a touch that occurred after order ORD-2026-000050",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000035"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0001180",
+  "related_entity_id": "TOUCH-CON-000626-000007",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000050",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000036"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0001181",
+  "related_entity_id": "TOUCH-CON-000626-000008",
+  "description": "linear credit given to a touch that occurred after order ORD-2026-000050",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000037"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0001187",
+  "related_entity_id": "TOUCH-CON-000626-000007",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000050",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000038"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0001188",
+  "related_entity_id": "TOUCH-CON-000626-000008",
+  "description": "time_decay credit given to a touch that occurred after order ORD-2026-000050",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000039"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0001194",
+  "related_entity_id": "TOUCH-CON-000626-000007",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000050",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000040"
+ },
+ {
+  "issue_type": "touchpoint_after_conversion_attributed",
+  "category": "injected_edge_case",
+  "entity": "attribution_result",
+  "entity_id": "ATTR-2026-0001195",
+  "related_entity_id": "TOUCH-CON-000626-000008",
+  "description": "position_based credit given to a touch that occurred after order ORD-2026-000050",
+  "expected_decision": "Reject: only touches at or before conversion may earn credit; re-run without the touch",
+  "gt_id": "GT-000041"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000001",
+  "related_entity_id": "CON-000007",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000042"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000002",
+  "related_entity_id": "CON-000007",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000043"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000003",
+  "related_entity_id": "CON-000021",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000044"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000004",
+  "related_entity_id": "CON-000034",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000045"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000005",
+  "related_entity_id": "CON-000037",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000046"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000006",
+  "related_entity_id": "CON-000043",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000047"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000007",
+  "related_entity_id": "CON-000058",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000048"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000008",
+  "related_entity_id": "CON-000069",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000049"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000009",
+  "related_entity_id": "CON-000073",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000050"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000010",
+  "related_entity_id": "CON-000077",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000051"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000011",
+  "related_entity_id": "CON-000080",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000052"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000012",
+  "related_entity_id": "CON-000091",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000053"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000013",
+  "related_entity_id": "CON-000093",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000054"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000014",
+  "related_entity_id": "CON-000101",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000055"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000015",
+  "related_entity_id": "CON-000109",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000056"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000016",
+  "related_entity_id": "CON-000111",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000057"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000017",
+  "related_entity_id": "CON-000112",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000058"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000018",
+  "related_entity_id": "CON-000123",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000059"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000019",
+  "related_entity_id": "CON-000127",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000060"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000020",
+  "related_entity_id": "CON-000135",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000061"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000021",
+  "related_entity_id": "CON-000142",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000062"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000022",
+  "related_entity_id": "CON-000166",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000063"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000023",
+  "related_entity_id": "CON-000178",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000064"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000024",
+  "related_entity_id": "CON-000196",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000065"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000025",
+  "related_entity_id": "CON-000207",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000066"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000026",
+  "related_entity_id": "CON-000207",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000067"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000027",
+  "related_entity_id": "CON-000214",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000068"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000028",
+  "related_entity_id": "CON-000223",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000069"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000029",
+  "related_entity_id": "CON-000238",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000070"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000030",
+  "related_entity_id": "CON-000241",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000071"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000031",
+  "related_entity_id": "CON-000259",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000072"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000032",
+  "related_entity_id": "CON-000263",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000073"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000033",
+  "related_entity_id": "CON-000264",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000074"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000034",
+  "related_entity_id": "CON-000269",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000075"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000035",
+  "related_entity_id": "CON-000272",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000076"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000036",
+  "related_entity_id": "CON-000274",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000077"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000037",
+  "related_entity_id": "CON-000323",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000078"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000038",
+  "related_entity_id": "CON-000327",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000079"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000039",
+  "related_entity_id": "CON-000330",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000080"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000040",
+  "related_entity_id": "CON-000332",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000081"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000041",
+  "related_entity_id": "CON-000336",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000082"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000042",
+  "related_entity_id": "CON-000339",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000083"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000043",
+  "related_entity_id": "CON-000350",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000084"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000044",
+  "related_entity_id": "CON-000350",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000085"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000045",
+  "related_entity_id": "CON-000366",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000086"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000046",
+  "related_entity_id": "CON-000377",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000087"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000047",
+  "related_entity_id": "CON-000381",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000088"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000048",
+  "related_entity_id": "CON-000381",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000089"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000049",
+  "related_entity_id": "CON-000425",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000090"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000050",
+  "related_entity_id": "CON-000428",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000091"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000051",
+  "related_entity_id": "CON-000450",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000092"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000052",
+  "related_entity_id": "CON-000451",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000093"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000053",
+  "related_entity_id": "CON-000456",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000094"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000054",
+  "related_entity_id": "CON-000458",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000095"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000055",
+  "related_entity_id": "CON-000470",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000096"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000056",
+  "related_entity_id": "CON-000480",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000097"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000057",
+  "related_entity_id": "CON-000487",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000098"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000058",
+  "related_entity_id": "CON-000492",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000099"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000059",
+  "related_entity_id": "CON-000493",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000100"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000060",
+  "related_entity_id": "CON-000512",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000101"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000061",
+  "related_entity_id": "CON-000517",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000102"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000062",
+  "related_entity_id": "CON-000522",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000103"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000063",
+  "related_entity_id": "CON-000525",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000104"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000064",
+  "related_entity_id": "CON-000527",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000105"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000065",
+  "related_entity_id": "CON-000528",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000106"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000066",
+  "related_entity_id": "CON-000539",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000107"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000067",
+  "related_entity_id": "CON-000539",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000108"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000068",
+  "related_entity_id": "CON-000543",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000109"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000069",
+  "related_entity_id": "CON-000546",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000110"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000070",
+  "related_entity_id": "CON-000547",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000111"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000071",
+  "related_entity_id": "CON-000550",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000112"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000072",
+  "related_entity_id": "CON-000552",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000113"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000073",
+  "related_entity_id": "CON-000552",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000114"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000074",
+  "related_entity_id": "CON-000558",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000115"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000075",
+  "related_entity_id": "CON-000571",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000116"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000076",
+  "related_entity_id": "CON-000572",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000117"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000077",
+  "related_entity_id": "CON-000596",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000118"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000078",
+  "related_entity_id": "CON-000596",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000119"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000079",
+  "related_entity_id": "CON-000598",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000120"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000080",
+  "related_entity_id": "CON-000619",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000121"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000081",
+  "related_entity_id": "CON-000643",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000122"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000082",
+  "related_entity_id": "CON-000658",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000123"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000083",
+  "related_entity_id": "CON-000664",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000124"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000084",
+  "related_entity_id": "CON-000673",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000125"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000085",
+  "related_entity_id": "CON-000675",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000126"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000086",
+  "related_entity_id": "CON-000679",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000127"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000087",
+  "related_entity_id": "CON-000680",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000128"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000088",
+  "related_entity_id": "CON-000681",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000129"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000089",
+  "related_entity_id": "CON-000687",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000130"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000090",
+  "related_entity_id": "CON-000688",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000131"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000091",
+  "related_entity_id": "CON-000690",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000132"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000092",
+  "related_entity_id": "CON-000692",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000133"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000093",
+  "related_entity_id": "CON-000693",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000134"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000094",
+  "related_entity_id": "CON-000704",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000135"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000095",
+  "related_entity_id": "CON-000707",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000136"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000096",
+  "related_entity_id": "CON-000708",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000137"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000097",
+  "related_entity_id": "CON-000711",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000138"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000098",
+  "related_entity_id": "CON-000715",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000139"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000099",
+  "related_entity_id": "CON-000746",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000140"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000100",
+  "related_entity_id": "CON-000749",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000141"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000101",
+  "related_entity_id": "CON-000759",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000142"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000102",
+  "related_entity_id": "CON-000765",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000143"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000103",
+  "related_entity_id": "CON-000769",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000144"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000104",
+  "related_entity_id": "CON-000774",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000145"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000105",
+  "related_entity_id": "CON-000777",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000146"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000106",
+  "related_entity_id": "CON-000783",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000147"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000107",
+  "related_entity_id": "CON-000785",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000148"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000108",
+  "related_entity_id": "CON-000810",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000149"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000109",
+  "related_entity_id": "CON-000828",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000150"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000110",
+  "related_entity_id": "CON-000828",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000151"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000111",
+  "related_entity_id": "CON-000828",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000152"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000112",
+  "related_entity_id": "CON-000832",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000153"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000113",
+  "related_entity_id": "CON-000846",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000154"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000114",
+  "related_entity_id": "CON-000849",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000155"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000115",
+  "related_entity_id": "CON-000856",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000156"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000116",
+  "related_entity_id": "CON-000856",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000157"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000117",
+  "related_entity_id": "CON-000867",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000158"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000118",
+  "related_entity_id": "CON-000868",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000159"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000119",
+  "related_entity_id": "CON-000872",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000160"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000120",
+  "related_entity_id": "CON-000873",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000161"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000121",
+  "related_entity_id": "CON-000885",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000162"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000122",
+  "related_entity_id": "CON-000905",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000163"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000123",
+  "related_entity_id": "CON-000905",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000164"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000124",
+  "related_entity_id": "CON-000913",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000165"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000125",
+  "related_entity_id": "CON-000913",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000166"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000126",
+  "related_entity_id": "CON-000917",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000167"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000127",
+  "related_entity_id": "CON-000923",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000168"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000128",
+  "related_entity_id": "CON-000924",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000169"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000129",
+  "related_entity_id": "CON-000927",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000170"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000130",
+  "related_entity_id": "CON-000943",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000171"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000131",
+  "related_entity_id": "CON-000954",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000172"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000132",
+  "related_entity_id": "CON-000965",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000173"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000133",
+  "related_entity_id": "CON-000973",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000174"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000134",
+  "related_entity_id": "CON-000979",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000175"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000135",
+  "related_entity_id": "CON-000985",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000176"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000136",
+  "related_entity_id": "CON-000987",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000177"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000137",
+  "related_entity_id": "CON-000989",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000178"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000138",
+  "related_entity_id": "CON-000992",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000179"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000139",
+  "related_entity_id": "CON-001002",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000180"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000140",
+  "related_entity_id": "CON-001008",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000181"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000141",
+  "related_entity_id": "CON-001008",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000182"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000142",
+  "related_entity_id": "CON-001027",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000183"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000143",
+  "related_entity_id": "CON-001037",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000184"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000144",
+  "related_entity_id": "CON-001054",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000185"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000145",
+  "related_entity_id": "CON-001062",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000186"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000146",
+  "related_entity_id": "CON-001084",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000187"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000147",
+  "related_entity_id": "CON-001087",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000188"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000148",
+  "related_entity_id": "CON-001088",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000189"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000149",
+  "related_entity_id": "CON-001091",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000190"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000150",
+  "related_entity_id": "CON-001092",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000191"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000151",
+  "related_entity_id": "CON-001092",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000192"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000152",
+  "related_entity_id": "CON-001096",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000193"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000153",
+  "related_entity_id": "CON-001103",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000194"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000154",
+  "related_entity_id": "CON-001103",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000195"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000155",
+  "related_entity_id": "CON-001111",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000196"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000156",
+  "related_entity_id": "CON-001118",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000197"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000157",
+  "related_entity_id": "CON-001126",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000198"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000158",
+  "related_entity_id": "CON-001131",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000199"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000159",
+  "related_entity_id": "CON-001133",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000200"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000160",
+  "related_entity_id": "CON-001139",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000201"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000161",
+  "related_entity_id": "CON-001142",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000202"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000162",
+  "related_entity_id": "CON-001144",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000203"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000163",
+  "related_entity_id": "CON-001157",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000204"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000164",
+  "related_entity_id": "CON-001163",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000205"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000165",
+  "related_entity_id": "CON-001173",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000206"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000166",
+  "related_entity_id": "CON-001174",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000207"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000167",
+  "related_entity_id": "CON-001186",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000208"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000168",
+  "related_entity_id": "CON-001192",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000209"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000169",
+  "related_entity_id": "CON-001202",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000210"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000170",
+  "related_entity_id": "CON-001218",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000211"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000171",
+  "related_entity_id": "CON-001219",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000212"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000172",
+  "related_entity_id": "CON-001228",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000213"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000173",
+  "related_entity_id": "CON-001230",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000214"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000174",
+  "related_entity_id": "CON-001232",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000215"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000175",
+  "related_entity_id": "CON-001237",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000216"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000176",
+  "related_entity_id": "CON-001242",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000217"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000177",
+  "related_entity_id": "CON-001250",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000218"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000178",
+  "related_entity_id": "CON-001287",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000219"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000179",
+  "related_entity_id": "CON-001288",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000220"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000180",
+  "related_entity_id": "CON-001293",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000221"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000181",
+  "related_entity_id": "CON-001293",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000222"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000182",
+  "related_entity_id": "CON-001299",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000223"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000183",
+  "related_entity_id": "CON-001309",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000224"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000184",
+  "related_entity_id": "CON-001311",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000225"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000185",
+  "related_entity_id": "CON-001315",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000226"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000186",
+  "related_entity_id": "CON-001328",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000227"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000187",
+  "related_entity_id": "CON-001333",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000228"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000188",
+  "related_entity_id": "CON-001334",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000229"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000189",
+  "related_entity_id": "CON-001336",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000230"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000190",
+  "related_entity_id": "CON-001336",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000231"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000191",
+  "related_entity_id": "CON-001338",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000232"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000192",
+  "related_entity_id": "CON-001347",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000233"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000193",
+  "related_entity_id": "CON-001353",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000234"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000194",
+  "related_entity_id": "CON-001353",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000235"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000195",
+  "related_entity_id": "CON-001355",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000236"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000196",
+  "related_entity_id": "CON-001372",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000237"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000197",
+  "related_entity_id": "CON-001375",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000238"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000198",
+  "related_entity_id": "CON-001377",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000239"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000199",
+  "related_entity_id": "CON-001383",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000240"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000200",
+  "related_entity_id": "CON-001384",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000241"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000201",
+  "related_entity_id": "CON-001387",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000242"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000202",
+  "related_entity_id": "CON-001389",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000243"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000203",
+  "related_entity_id": "CON-001396",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000244"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000204",
+  "related_entity_id": "CON-001406",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000245"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000205",
+  "related_entity_id": "CON-001410",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000246"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000206",
+  "related_entity_id": "CON-001425",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000247"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000207",
+  "related_entity_id": "CON-001442",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000248"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000208",
+  "related_entity_id": "CON-001442",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000249"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000209",
+  "related_entity_id": "CON-001442",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000250"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000210",
+  "related_entity_id": "CON-001442",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000251"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000211",
+  "related_entity_id": "CON-001442",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000252"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000212",
+  "related_entity_id": "CON-001451",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000253"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000213",
+  "related_entity_id": "CON-001460",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000254"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000214",
+  "related_entity_id": "CON-001464",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000255"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000215",
+  "related_entity_id": "CON-001467",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000256"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000216",
+  "related_entity_id": "CON-001473",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000257"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000217",
+  "related_entity_id": "CON-001483",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000258"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000218",
+  "related_entity_id": "CON-001486",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000259"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000219",
+  "related_entity_id": "CON-001495",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000260"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000220",
+  "related_entity_id": "CON-001497",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000261"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000221",
+  "related_entity_id": "CON-001498",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000262"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000222",
+  "related_entity_id": "CON-001508",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000263"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000223",
+  "related_entity_id": "CON-001510",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000264"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000224",
+  "related_entity_id": "CON-001520",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000265"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000225",
+  "related_entity_id": "CON-001525",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000266"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000226",
+  "related_entity_id": "CON-001546",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000267"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000227",
+  "related_entity_id": "CON-001558",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000268"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000228",
+  "related_entity_id": "CON-001561",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000269"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000229",
+  "related_entity_id": "CON-001567",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000270"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000230",
+  "related_entity_id": "CON-001567",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000271"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000231",
+  "related_entity_id": "CON-001575",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000272"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000232",
+  "related_entity_id": "CON-001576",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000273"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000233",
+  "related_entity_id": "CON-001580",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000274"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000234",
+  "related_entity_id": "CON-001585",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000275"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000235",
+  "related_entity_id": "CON-001590",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000276"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000236",
+  "related_entity_id": "CON-001621",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000277"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000237",
+  "related_entity_id": "CON-001628",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000278"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000238",
+  "related_entity_id": "CON-001629",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000279"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000239",
+  "related_entity_id": "CON-001630",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000280"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000240",
+  "related_entity_id": "CON-001633",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000281"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000241",
+  "related_entity_id": "CON-001638",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000282"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000242",
+  "related_entity_id": "CON-001642",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000283"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000243",
+  "related_entity_id": "CON-001650",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000284"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000244",
+  "related_entity_id": "CON-001658",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000285"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000245",
+  "related_entity_id": "CON-001671",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000286"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000246",
+  "related_entity_id": "CON-001672",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000287"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000247",
+  "related_entity_id": "CON-001679",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000288"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000248",
+  "related_entity_id": "CON-001681",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000289"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000249",
+  "related_entity_id": "CON-001684",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000290"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000250",
+  "related_entity_id": "CON-001684",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000291"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000251",
+  "related_entity_id": "CON-001691",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000292"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000252",
+  "related_entity_id": "CON-001693",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000293"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000253",
+  "related_entity_id": "CON-001701",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000294"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000254",
+  "related_entity_id": "CON-001701",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000295"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000255",
+  "related_entity_id": "CON-001718",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000296"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000256",
+  "related_entity_id": "CON-001731",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000297"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000257",
+  "related_entity_id": "CON-001731",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000298"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000258",
+  "related_entity_id": "CON-001732",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000299"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000259",
+  "related_entity_id": "CON-001751",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000300"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000260",
+  "related_entity_id": "CON-001763",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000301"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000261",
+  "related_entity_id": "CON-001764",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000302"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000262",
+  "related_entity_id": "CON-001775",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000303"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000263",
+  "related_entity_id": "CON-001782",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000304"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000264",
+  "related_entity_id": "CON-001811",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000305"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000265",
+  "related_entity_id": "CON-001812",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000306"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000266",
+  "related_entity_id": "CON-001821",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000307"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000267",
+  "related_entity_id": "CON-001821",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000308"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000268",
+  "related_entity_id": "CON-001825",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000309"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000269",
+  "related_entity_id": "CON-001847",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000310"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000270",
+  "related_entity_id": "CON-001847",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000311"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000271",
+  "related_entity_id": "CON-001867",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000312"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000272",
+  "related_entity_id": "CON-001870",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000313"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000273",
+  "related_entity_id": "CON-001877",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000314"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000274",
+  "related_entity_id": "CON-001878",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000315"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000275",
+  "related_entity_id": "CON-001881",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000316"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000276",
+  "related_entity_id": "CON-001896",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000317"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000277",
+  "related_entity_id": "CON-001896",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000318"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000278",
+  "related_entity_id": "CON-001896",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000319"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000279",
+  "related_entity_id": "CON-001921",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000320"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000280",
+  "related_entity_id": "CON-001927",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000321"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000281",
+  "related_entity_id": "CON-001927",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000322"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000282",
+  "related_entity_id": "CON-001933",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000323"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000283",
+  "related_entity_id": "CON-001938",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000324"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000284",
+  "related_entity_id": "CON-001949",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000325"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000285",
+  "related_entity_id": "CON-001953",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000326"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000286",
+  "related_entity_id": "CON-001975",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000327"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000287",
+  "related_entity_id": "CON-001979",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000328"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000288",
+  "related_entity_id": "CON-001981",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000329"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000289",
+  "related_entity_id": "CON-001989",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000330"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000290",
+  "related_entity_id": "CON-002015",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000331"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000291",
+  "related_entity_id": "CON-002015",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000332"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000292",
+  "related_entity_id": "CON-002020",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000333"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000293",
+  "related_entity_id": "CON-002042",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000334"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000294",
+  "related_entity_id": "CON-002047",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000335"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000295",
+  "related_entity_id": "CON-002065",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000336"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000296",
+  "related_entity_id": "CON-002067",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000337"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000297",
+  "related_entity_id": "CON-002075",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000338"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000298",
+  "related_entity_id": "CON-002088",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000339"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000299",
+  "related_entity_id": "CON-002097",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000340"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000300",
+  "related_entity_id": "CON-002097",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000341"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000301",
+  "related_entity_id": "CON-002102",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000342"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000302",
+  "related_entity_id": "CON-002107",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000343"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000303",
+  "related_entity_id": "CON-002114",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000344"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000304",
+  "related_entity_id": "CON-002114",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000345"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000305",
+  "related_entity_id": "CON-002117",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000346"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000306",
+  "related_entity_id": "CON-002124",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000347"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000307",
+  "related_entity_id": "CON-002128",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000348"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000308",
+  "related_entity_id": "CON-002137",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000349"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000309",
+  "related_entity_id": "CON-002142",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000350"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000310",
+  "related_entity_id": "CON-002143",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000351"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000311",
+  "related_entity_id": "CON-002148",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000352"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000312",
+  "related_entity_id": "CON-002157",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000353"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000313",
+  "related_entity_id": "CON-002163",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000354"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000314",
+  "related_entity_id": "CON-002174",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000355"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000315",
+  "related_entity_id": "CON-002175",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000356"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000316",
+  "related_entity_id": "CON-002198",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000357"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000317",
+  "related_entity_id": "CON-002199",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000358"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000318",
+  "related_entity_id": "CON-002199",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000359"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000319",
+  "related_entity_id": "CON-002205",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000360"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000320",
+  "related_entity_id": "CON-002211",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000361"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000321",
+  "related_entity_id": "CON-002212",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000362"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000322",
+  "related_entity_id": "CON-002231",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000363"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000323",
+  "related_entity_id": "CON-002235",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000364"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000324",
+  "related_entity_id": "CON-002235",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000365"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000325",
+  "related_entity_id": "CON-002253",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000366"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000326",
+  "related_entity_id": "CON-002268",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000367"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000327",
+  "related_entity_id": "CON-002269",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000368"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000328",
+  "related_entity_id": "CON-002286",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000369"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000329",
+  "related_entity_id": "CON-002295",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000370"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000330",
+  "related_entity_id": "CON-002300",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000371"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000331",
+  "related_entity_id": "CON-002319",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000372"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000332",
+  "related_entity_id": "CON-002330",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000373"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000333",
+  "related_entity_id": "CON-002330",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000374"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000334",
+  "related_entity_id": "CON-002333",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000375"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000335",
+  "related_entity_id": "CON-002347",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000376"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000336",
+  "related_entity_id": "CON-002354",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000377"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000337",
+  "related_entity_id": "CON-002359",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000378"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000338",
+  "related_entity_id": "CON-002362",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000379"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000339",
+  "related_entity_id": "CON-002364",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000380"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000340",
+  "related_entity_id": "CON-002364",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000381"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000341",
+  "related_entity_id": "CON-002368",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000382"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000342",
+  "related_entity_id": "CON-002377",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000383"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000343",
+  "related_entity_id": "CON-002380",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000384"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000344",
+  "related_entity_id": "CON-002382",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000385"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000345",
+  "related_entity_id": "CON-002385",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000386"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000346",
+  "related_entity_id": "CON-002405",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000387"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000347",
+  "related_entity_id": "CON-002406",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000388"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000348",
+  "related_entity_id": "CON-002406",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000389"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000349",
+  "related_entity_id": "CON-002410",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000390"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000350",
+  "related_entity_id": "CON-002422",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000391"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000351",
+  "related_entity_id": "CON-002425",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000392"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000352",
+  "related_entity_id": "CON-002427",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000393"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000353",
+  "related_entity_id": "CON-002440",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000394"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000354",
+  "related_entity_id": "CON-002446",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000395"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000355",
+  "related_entity_id": "CON-002455",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000396"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000356",
+  "related_entity_id": "CON-002459",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000397"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000357",
+  "related_entity_id": "CON-002473",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000398"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000358",
+  "related_entity_id": "CON-002481",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000399"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000359",
+  "related_entity_id": "CON-002490",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000400"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000360",
+  "related_entity_id": "CON-002494",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000401"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000361",
+  "related_entity_id": "CON-002494",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000402"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000362",
+  "related_entity_id": "CON-002494",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000403"
+ },
+ {
+  "issue_type": "missing_identifier",
+  "category": "baseline_condition",
+  "entity": "touchpoint",
+  "entity_id": "TOUCH-UNKNOWN-000363",
+  "related_entity_id": "CON-002498",
+  "description": "Touch captured without an identity key; related_entity_id is the TRUE contact, unknowable from inputs",
+  "expected_decision": "Exclude from attribution; surface as identity gap; never guess the contact",
+  "gt_id": "GT-000404"
+ }
+]

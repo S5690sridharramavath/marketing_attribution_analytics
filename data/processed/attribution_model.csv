@@ -1,0 +1,6 @@
+model_id,rule_description,lookback_days,eligible_touch_types
+first_touch,100% of credit to the earliest eligible touch in the window,120,click|email_open|event_attendance|webinar_attendance|mail_response
+last_touch,100% of credit to the latest eligible touch at or before conversion,120,click|email_open|event_attendance|webinar_attendance|mail_response
+linear,Equal credit to every eligible touch in the window,120,click|email_open|event_attendance|webinar_attendance|mail_response
+time_decay,Credit proportional to 0.5^(age_days/7): recent touches weigh more,120,click|email_open|event_attendance|webinar_attendance|mail_response
+position_based,"40% first, 40% last, 20% shared by middle touches (2 touches: 50/50; 1 touch: 100%)",120,click|email_open|event_attendance|webinar_attendance|mail_response

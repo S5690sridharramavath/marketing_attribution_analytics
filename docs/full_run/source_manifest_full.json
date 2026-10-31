@@ -1,0 +1,154 @@
+{
+ "generator_version": "2.0.0",
+ "command": "python -m src.main generate --scale 1.0 --seed 20261022 --out /tmp/full3",
+ "seed": 20261022,
+ "as_of": "2026-10-22T23:59:59",
+ "parameters": {
+  "seed": 20261022,
+  "campaigns": 500,
+  "contacts": 50000,
+  "touchpoints": 200000,
+  "opportunities": 10000,
+  "lead_rate": 0.4,
+  "win_rate": 0.38,
+  "missing_id_rate": 0.05,
+  "lookback_days": 120,
+  "post_conv_grace_days": 90,
+  "n_dup_orders": 40,
+  "n_post_conv": 60,
+  "n_cost_mismatch": 30,
+  "n_cost_omitted": 15,
+  "n_anon_linked": 25
+ },
+ "python": "3.12.3",
+ "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+ "external_data": [],
+ "provenance": "100% synthetic. No external or personal data used; no sources to attribute.",
+ "files": [
+  {
+   "file": "data/ground_truth/ground_truth.csv",
+   "rows": 8158,
+   "sha256": "6fddf306b7b50a6812e07cbc8d2db39b91eca9153e27dd84d5581e1a9cfaa7c3"
+  },
+  {
+   "file": "data/ground_truth/ground_truth.json",
+   "rows": null,
+   "sha256": "fb96418a04d68c3bda6791b59c11fba12ecf978d6317e911c02b5656a27d66a9"
+  },
+  {
+   "file": "data/ground_truth/ground_truth_campaign_quality.csv",
+   "rows": 500,
+   "sha256": "138a4b333639ba010a49dc6f766d8fa97c147f8292f516df2069aa463da0dcb4"
+  },
+  {
+   "file": "data/processed/attribution_model.csv",
+   "rows": 5,
+   "sha256": "ee266a8babc37788f42e56ef509fa80b4821f50f86714613b23fb5ec146e94f0"
+  },
+  {
+   "file": "data/processed/attribution_result.csv",
+   "rows": 57276,
+   "sha256": "d5d138138cd8ef1b57f1deff1b696aa04fa44eb82510d4c6bbbdce136ac23669"
+  },
+  {
+   "file": "data/processed/evaluation_period.csv",
+   "rows": 3,
+   "sha256": "b402ad3a36db33b7622fa6dbf5cabba87fdb532f3fde8616c634fc4a3baea731"
+  },
+  {
+   "file": "data/raw/audience.csv",
+   "rows": 45,
+   "sha256": "2cc967f38cfde35d0fda934bd7bf84585e0322fda4a28c651bf97282e4f6f8ea"
+  },
+  {
+   "file": "data/raw/campaign.csv",
+   "rows": 500,
+   "sha256": "3bc10ffb6dd0e1bf83723ad8fe43f7b55a96230c9abadc6f7540c6d61f3cab05"
+  },
+  {
+   "file": "data/raw/campaign_audience.csv",
+   "rows": 996,
+   "sha256": "274711a779ca63b3114b9fa427f5f5831639a4de78f70640f49af774e1df0d04"
+  },
+  {
+   "file": "data/raw/campaign_status_event.csv",
+   "rows": 1365,
+   "sha256": "2000fec9634647674c9cf507d29f3f8e00c0f3c83a50554e348a935c8c5a2754"
+  },
+  {
+   "file": "data/raw/channel.csv",
+   "rows": 11,
+   "sha256": "c7b7bf91a87852e7eed28a2260bbef731907c0508031b4f4ea79874696b8d75d"
+  },
+  {
+   "file": "data/raw/contact.csv",
+   "rows": 50000,
+   "sha256": "57c8d8eed068e63069963bf7572bc56d3a0f39ea2a607dfa31ab0635e6afc047"
+  },
+  {
+   "file": "data/raw/contact_audience.csv",
+   "rows": 60126,
+   "sha256": "20aefc1bc88827ba149a7c2f01d561d694dea1e038182b6ddfb2b948bb12a41a"
+  },
+  {
+   "file": "data/raw/cost_record.csv",
+   "rows": 8186,
+   "sha256": "92a05405b2159054cbc1982b531f85fd88b8146712aa5efa0e5e0df59e68a0f8"
+  },
+  {
+   "file": "data/raw/creative.csv",
+   "rows": 1190,
+   "sha256": "d7540cb709861f5e5fcab036507c10547c8e59fa000f8ea48bad9b52344d2ef9"
+  },
+  {
+   "file": "data/raw/fx_rate.csv",
+   "rows": 44,
+   "sha256": "0bc15a03d2c6bb764e990f7ae9929262ec203f82ccabf83240c2a39f2fa1a052"
+  },
+  {
+   "file": "data/raw/lead.csv",
+   "rows": 20000,
+   "sha256": "4486121257cfbd8a07d1e1a9fc2fd6b88f639f669899bcd3cbfacaddbfa0b565"
+  },
+  {
+   "file": "data/raw/lead_status_event.csv",
+   "rows": 59559,
+   "sha256": "97685418588aaef6af8f400cd1b786f6541295060a338e2070f78ae11128c99e"
+  },
+  {
+   "file": "data/raw/opportunity.csv",
+   "rows": 10000,
+   "sha256": "43cf3f3db77f6f5de74295f1b9ca300d09955bda461a1591cb12ab6516109df5"
+  },
+  {
+   "file": "data/raw/opportunity_stage_event.csv",
+   "rows": 34076,
+   "sha256": "456ca01c206496d55e376b247dea8d5fc8370cf421a83abefc747363e001e157"
+  },
+  {
+   "file": "data/raw/sales_order.csv",
+   "rows": 3009,
+   "sha256": "c7c1028be9822e8c27bd270c742d48a78d347a2dd5b16f3f2f62d9f4bb64ef3a"
+  },
+  {
+   "file": "data/raw/touchpoint.csv",
+   "rows": 200000,
+   "sha256": "f6ed8988b4743ce3e54051f4e456aefa1a106642677c4de332574bf1af7a0917"
+  },
+  {
+   "file": "data/raw/web_session.csv",
+   "rows": 110007,
+   "sha256": "d9737776906cfa47046f42e4ffb6125a9164c6294ecac42ac2247a0bcaf3c7c9"
+  },
+  {
+   "file": "database/schema.sql",
+   "rows": null,
+   "sha256": "4f73dc3f7fd11d5da5a117bba1afaf1a309367d426717fd38b58b18a8db37fff"
+  },
+  {
+   "file": "database/seed.sql",
+   "rows": null,
+   "sha256": "102a0d38d6ef845a88d00d6eda4c4fdc0284284f133b03e7549b56baf76be5fd"
+  }
+ ]
+}

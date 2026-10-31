@@ -1,0 +1,5 @@
+# Generator, validator, attribution and reports need NOTHING beyond Python 3.9+ (standard library only).
+pytest>=7            # tests
+# Optional dashboard only (dashboard/app.py):
+streamlit>=1.30
+pandas>=2.0

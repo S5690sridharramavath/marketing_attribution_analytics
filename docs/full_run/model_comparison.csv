@@ -1,0 +1,11 @@
+model_id,variant,total_revenue_usd,unattributed_revenue_usd,unattributed_share,portfolio_roi,channel_roi_rank_stability_train_vs_test,n_channels_compared,campaign_credit_per_engaged_touch_vs_latent_quality_spearman
+first_touch,raw,126950750.0,14835350.0,0.1169,1.0554,0.9818,11,0.0868
+first_touch,clean,125206100.0,14585950.0,0.1165,1.1858,0.9818,11,0.0867
+last_touch,raw,126950750.0,14835350.0,0.1169,1.0303,0.9636,11,0.0699
+last_touch,clean,125206100.0,14585950.0,0.1165,1.1562,0.9455,11,0.0696
+linear,raw,126950750.0,14835350.0,0.1169,1.0444,0.9727,11,0.1096
+linear,clean,125206100.0,14585950.0,0.1165,1.1718,0.9636,11,0.1037
+time_decay,raw,126950750.0,14835350.0,0.1169,1.0334,0.9636,11,0.0643
+time_decay,clean,125206100.0,14585950.0,0.1165,1.1593,0.9455,11,0.0662
+position_based,raw,126950750.0,14835350.0,0.1169,1.0433,0.9636,11,0.0981
+position_based,clean,125206100.0,14585950.0,0.1165,1.1712,0.9455,11,0.0944
